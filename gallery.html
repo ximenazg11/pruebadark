@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Darkoteca Gallery</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    color:white;
+    font-family:Arial, sans-serif;
+    overflow-x:hidden;
+}
+
+/* BOTON REGRESAR */
+
+.back-btn{
+    position:fixed;
+    top:25px;
+    left:25px;
+
+    background:white;
+    color:black;
+
+    text-decoration:none;
+
+    padding:12px 25px;
+
+    border-radius:40px;
+
+    font-weight:bold;
+
+    z-index:999;
+}
+
+/* CONTENEDOR */
+
+.gallery-container{
+    max-width:1400px;
+    margin:auto;
+    padding:120px 20px;
+}
+
+/* FILAS DISPERSAS */
+
+.gallery-row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    margin-bottom:120px;
+    flex-wrap:wrap;
+}
+
+/* IMAGENES */
+
+.gallery-item{
+    overflow:hidden;
+}
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+
+    transition:.4s;
+}
+
+.gallery-item img:hover{
+    transform:scale(1.03);
+}
+
+/* TAMAÑOS DISTINTOS */
+
+.small{
+    width:280px;
+}
+
+.medium{
+    width:420px;
+}
+
+.large{
+    width:600px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .gallery-row{
+        margin-bottom:60px;
+        gap:20px;
+    }
+
+    .small,
+    .medium,
+    .large{
+        width:100%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="back-btn">Regresar</a>
+
+<div class="gallery-container">
+
+    <div class="gallery-row">
+        <div class="gallery-item small">
+            <img src="img/darkoteca1.webp" loading="lazy">
+        </div>
+
+        <div class="gallery-item medium">
+            <img src="img/darkoteca2.webp" loading="lazy">
+        </div>
+
+        <div class="gallery-item small">
+            <img src="img/darkoteca3.webp" loading="lazy">
+        </div>
+    </div>
+
+    <div class="gallery-row">
+        <div class="gallery-item large">
+            <img src="img/darkoteca4.webp" loading="lazy">
+        </div>
+    </div>
+
+    <div class="gallery-row">
+        <div class="gallery-item medium">
+            <img src="img/darkoteca5.webp" loading="lazy">
+        </div>
+
+        <div class="gallery-item large">
+            <img src="img/darkoteca6.webp" loading="lazy">
+        </div>
+    </div>
+    <div class="gallery-row">
+
+    <div class="gallery-item small">
+        <img src="img/darkoteca7.webp" loading="lazy">
+    </div>
+
+    <div class="gallery-item large">
+        <img src="img/darkoteca8.webp" loading="lazy">
+    </div>
+
+</div>
+
+<div class="gallery-row">
+
+    <div class="gallery-item medium">
+        <img src="img/darkoteca9.webp" loading="lazy">
+    </div>
+
+    <div class="gallery-item small">
+        <img src="img/darkoteca10.webp" loading="lazy">
+    </div>
+
+    <div class="gallery-item medium">
+        <img src="img/darkoteca11.webp" loading="lazy">
+    </div>
+
+</div>
+
+<div class="gallery-row">
+
+    <div class="gallery-item large">
+        <img src="img/darkoteca12.webp" loading="lazy">
+    </div>
+
+</div>
+
+<div class="gallery-row">
+
+    <div class="gallery-item small">
+        <img src="img/darkoteca13.webp" loading="lazy">
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
