@@ -301,6 +301,12 @@ body{
 
 /* LOGO */
 
+.logo{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+}
+
 .logo img{
     height:35px;
     width:auto;

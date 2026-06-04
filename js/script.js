@@ -1,5 +1,7 @@
 /* MENU */
-
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
 const menuToggle = document.getElementById("menuToggle");
 const sideMenu = document.getElementById("sideMenu");
 
@@ -40,4 +42,35 @@ prevBtn.addEventListener("click", () => {
     }
 
     updateSlider();
+});
+/* VIDEO RESPONSIVE */
+
+const heroVideo = document.getElementById("heroVideo");
+const videoSource = document.getElementById("videoSource");
+
+function loadVideo() {
+
+    if(window.innerWidth <= 768){
+
+        // CELULAR
+        videoSource.src = "img/LANDING PAGE MOBILE.mp4";
+
+    } else {
+
+        // PC Y TABLET
+        videoSource.src = "img/LANDING PAGE DESKTOP.mp4";
+
+    }
+
+    heroVideo.load();
+}
+
+loadVideo();
+
+window.addEventListener("resize", loadVideo);
+
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 100);
 });
